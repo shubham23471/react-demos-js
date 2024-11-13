@@ -1,13 +1,9 @@
 import React from "react";
-import Person from "./components/Person";
+import Weather from "./components/Weather";
 
 const App = () => {
-  return (
-    <Person name="shuhham" age={20}>
-      <p />
-      This is children elment
-    </Person>
-  );
+  const tempValue = 15;
+  return <Weather temperatue={tempValue}></Weather>;
 };
 
 export default App;
