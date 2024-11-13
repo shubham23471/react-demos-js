@@ -1,11 +1,12 @@
 import React from "react";
-import UserList from "./components/UserList";
+import Person from "./components/Person";
 
 const App = () => {
   return (
-    <div>
-      <UserList />
-    </div>
+    <Person name="shuhham" age={20}>
+      <p />
+      This is children elment
+    </Person>
   );
 };
 
