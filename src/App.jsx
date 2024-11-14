@@ -1,20 +1,16 @@
 import React from "react";
-import ComponentOne from "./components/ComponentOne";
-import ComponentTwo from "./components/ComponentTwo";
 import { useState } from "react";
+import IncrementViaFunc from "./components/IncrementViaFunc";
 
 const App = () => {
-  // TODO: Update this count from child component
-  const [count, setCount] = useState(0);
-  const updateClickHandler = () => setCount(count + 100);
+  // Intinal value is defined by a function
+  const [counter, setCounter] = useState(() => {
+    const initialCount = 10;
+    return initialCount;
+  });
   return (
     <div>
-      <ComponentOne
-        count={count}
-        setCount={setCount}
-        updateClickHandler={updateClickHandler}
-      />
-      <ComponentTwo count={count} />
+      <IncrementViaFunc counter={counter} setCounter={setCounter} />
     </div>
   );
 };
