@@ -1,16 +1,23 @@
 import React from "react";
+import TodoList from "./components/TodoList";
 import { useState } from "react";
-import IncrementViaFunc from "./components/IncrementViaFunc";
+import Counter from "./components/Counter";
+import TodoListForm from "./components/TodoListForm";
+import Profile from "./components/Profile";
+import ShoppingList from "./components/ShoppingList";
 
 const App = () => {
-  // Intinal value is defined by a function
-  const [counter, setCounter] = useState(() => {
-    const initialCount = 10;
-    return initialCount;
-  });
   return (
     <div>
-      <IncrementViaFunc counter={counter} setCounter={setCounter} />
+      {/* <p>------- Simple Counter-------</p>
+      <Counter></Counter>
+      <p>--------------</p>
+      <p>------- Static Item update-------</p>
+      <TodoList> </TodoList>
+      <p>--------------</p> */}
+      {/* <TodoListForm></TodoListForm> */}
+      {/* <Profile></Profile> */}
+      <ShoppingList></ShoppingList>
     </div>
   );
 };
