@@ -1,16 +1,10 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import useFetch from "./components/useFetch";
 
 const App = () => {
-  const [data, setData] = useState(null);
+  // calling customHook with url
+  const [data] = useFetch("https://jsonplaceholder.typicode.com/todos");
 
-  // only want to render this content once: []
-  // fetch the data and store it data var using setData
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/todos")
-      .then((res) => res.json())
-      .then((data) => setData(data));
-  }, []);
   return (
     <div>
       {data &&
